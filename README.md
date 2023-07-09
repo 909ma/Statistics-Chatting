@@ -46,10 +46,10 @@
 | :--: |
 | <img src="./기타/10번.png" width="50%" height="" title="" alt="10번"></img> |
 
-|채팅방 데이터 뽑는 방법|
-| :--: |
-| <img src="./기타/11번.gif" width="100%" height="" title="" alt="11번"></img> |
-|텔레그램|
+|채팅방 데이터 뽑는 방법||
+| :--: | :--: |
+| <img src="./기타/11번.gif" width="100%" height="" title="" alt="11번"></img> |추가 예정|
+|텔레그램|카카오톡|
 
 ## 📚 개발 환경
 
