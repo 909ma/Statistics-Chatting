@@ -1,0 +1,1 @@
+result.json으로 넣으세요

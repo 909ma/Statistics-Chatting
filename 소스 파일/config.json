@@ -1,0 +1,7 @@
+{
+  "group_name": "톡방 이름 넣으세요~",
+  "input_file": ".\\src\\result.json",
+  "output_file": ".\\src\\data.json",
+  "font_path": "C:\\Users\\컴퓨터 이름 적으세요~\\AppData\\Local\\Microsoft\\Windows\\Fonts\\쓰고 싶은 폰트 넣으세요~.ttf",
+  "result_folder": "result/"
+}
