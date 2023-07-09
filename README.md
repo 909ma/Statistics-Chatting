@@ -1,19 +1,17 @@
-# Statistics-Chatting
+## 📚 Statistics-Chatting
 
-톡방 통계 프로그램입니다.
-
-Programming Language: Python  
-IDE: PyCharm  
+톡방 통계 프로그램입니다.  
+현재 텔레그램만 지원합니다.
 
 
 |config.json|
 | :--: |
-| <img src="./기타/1번%20config.json.jpg" width="100%" height="" title="" alt="1번"></img> |
+| <img src="./기타/1번.jpg" width="100%" height="" title="" alt="1번"></img> |
 |적절하게 수정합니다.|
 
 |main.py 실행 화면|
 | :--: |
-| <img src="./기타/2번%20main.py%20실행.jpg" width="100%" height="" title="" alt="2번"></img> |
+| <img src="./기타/2번.jpg" width="100%" height="" title="" alt="2번"></img> |
 |원하는 기능에 맞는 숫자를 입력합니다.|
 
 |메세지 전송량 변화 추이(개인)|
@@ -47,3 +45,23 @@ IDE: PyCharm
 |자주 쓰는 단어(필터 ON)(단체)|
 | :--: |
 | <img src="./기타/10번.png" width="50%" height="" title="" alt="10번"></img> |
+
+## 📚 개발 환경
+
+> OS; Operating System  
+> <br>
+>
+> > <img src="https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=Windows&logoColor=white">
+---
+
+> IDE; Integrated Development Environment  
+> <br>
+>
+> > <img src="https://img.shields.io/badge/pycharm -000000?style=for-the-badge&logo=pycharm&logoColor=white">
+
+---
+
+> Programming Languages  
+> <br>
+>
+> > <img src="https://img.shields.io/badge/python -3776AB?style=for-the-badge&logo=python&logoColor=white">
