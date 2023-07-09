@@ -66,7 +66,7 @@ def run(font_path, group_name, result_folder):
     # 워드 클라우드 생성 및 표시
     fig, axs = plt.subplots(2, len(user_top_words) // 2, figsize=(12, 8))
     axs = axs.flatten()
-    fig.suptitle(ChartTitle + " " + group_name + ' 하는 말(필터 ON)(개인)', fontsize=16, fontproperties=fontprop)
+    fig.suptitle(ChartTitle + " " + group_name + ' 자주 하는 말(필터 ON)(개인)', fontsize=16, fontproperties=fontprop)
     for i, (user, top_words) in enumerate(user_top_words.items()):
         wordcloud = WordCloud(
             background_color="white",
