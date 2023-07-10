@@ -1,0 +1,124 @@
+C:\Users\sin00\AppData\Local\Programs\Python\Python311\python.exe "C:\Users\sin00\OneDrive\바탕 화면\소스 파일\main.py" 
+.\src\result.json
+.\src\data.json
+data.json을 모두 추출해야 정상적으로 가동합니다.
+1. data.json 추출
+2. 메세지 전송량 변화 추이(개인)
+3. 메세지 전송 시각(메세지 건 당)
+4. 메세지 전송 시각(글자수 당)
+5. 메세지 전송량
+6. 자주 쓰는 단어(필터 OFF)(개인)
+7. 자주 쓰는 단어(필터 OFF)(단체)
+8. 자주 쓰는 단어(필터 ON)(개인)
+9. 자주 쓰는 단어(필터 ON)(단체)
+0. 종료
+원하는 기능을 선택하세요: 4
+YYYYMM: all
+data.json을 모두 추출해야 정상적으로 가동합니다.
+1. data.json 추출
+2. 메세지 전송량 변화 추이(개인)
+3. 메세지 전송 시각(메세지 건 당)
+4. 메세지 전송 시각(글자수 당)
+5. 메세지 전송량
+6. 자주 쓰는 단어(필터 OFF)(개인)
+7. 자주 쓰는 단어(필터 OFF)(단체)
+8. 자주 쓰는 단어(필터 ON)(개인)
+9. 자주 쓰는 단어(필터 ON)(단체)
+0. 종료
+원하는 기능을 선택하세요: 5
+YYYYMM: all
+data.json을 모두 추출해야 정상적으로 가동합니다.
+1. data.json 추출
+2. 메세지 전송량 변화 추이(개인)
+3. 메세지 전송 시각(메세지 건 당)
+4. 메세지 전송 시각(글자수 당)
+5. 메세지 전송량
+6. 자주 쓰는 단어(필터 OFF)(개인)
+7. 자주 쓰는 단어(필터 OFF)(단체)
+8. 자주 쓰는 단어(필터 ON)(개인)
+9. 자주 쓰는 단어(필터 ON)(단체)
+0. 종료
+원하는 기능을 선택하세요: 6
+YYYYMM: all
+data.json을 모두 추출해야 정상적으로 가동합니다.
+1. data.json 추출
+2. 메세지 전송량 변화 추이(개인)
+3. 메세지 전송 시각(메세지 건 당)
+4. 메세지 전송 시각(글자수 당)
+5. 메세지 전송량
+6. 자주 쓰는 단어(필터 OFF)(개인)
+7. 자주 쓰는 단어(필터 OFF)(단체)
+8. 자주 쓰는 단어(필터 ON)(개인)
+9. 자주 쓰는 단어(필터 ON)(단체)
+0. 종료
+원하는 기능을 선택하세요: 7
+YYYYMM: all
+data.json을 모두 추출해야 정상적으로 가동합니다.
+1. data.json 추출
+2. 메세지 전송량 변화 추이(개인)
+3. 메세지 전송 시각(메세지 건 당)
+4. 메세지 전송 시각(글자수 당)
+5. 메세지 전송량
+6. 자주 쓰는 단어(필터 OFF)(개인)
+7. 자주 쓰는 단어(필터 OFF)(단체)
+8. 자주 쓰는 단어(필터 ON)(개인)
+9. 자주 쓰는 단어(필터 ON)(단체)
+0. 종료
+원하는 기능을 선택하세요: 8
+YYYYMM: all
+data.json을 모두 추출해야 정상적으로 가동합니다.
+1. data.json 추출
+2. 메세지 전송량 변화 추이(개인)
+3. 메세지 전송 시각(메세지 건 당)
+4. 메세지 전송 시각(글자수 당)
+5. 메세지 전송량
+6. 자주 쓰는 단어(필터 OFF)(개인)
+7. 자주 쓰는 단어(필터 OFF)(단체)
+8. 자주 쓰는 단어(필터 ON)(개인)
+9. 자주 쓰는 단어(필터 ON)(단체)
+0. 종료
+원하는 기능을 선택하세요: 9
+YYYYMM: all
+Exception ignored in: <function Variable.__del__ at 0x00000242E5CEAA20>
+Traceback (most recent call last):
+  File "C:\Users\sin00\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 410, in __del__
+    if self._tk.getboolean(self._tk.call("info", "exists", self._name)):
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: main thread is not in main loop
+Exception ignored in: <function Variable.__del__ at 0x00000242E5CEAA20>
+Traceback (most recent call last):
+  File "C:\Users\sin00\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 410, in __del__
+    if self._tk.getboolean(self._tk.call("info", "exists", self._name)):
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: main thread is not in main loop
+Exception ignored in: <function Variable.__del__ at 0x00000242E5CEAA20>
+Traceback (most recent call last):
+  File "C:\Users\sin00\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 410, in __del__
+    if self._tk.getboolean(self._tk.call("info", "exists", self._name)):
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: main thread is not in main loop
+Exception ignored in: <function Variable.__del__ at 0x00000242E5CEAA20>
+Traceback (most recent call last):
+  File "C:\Users\sin00\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 410, in __del__
+    if self._tk.getboolean(self._tk.call("info", "exists", self._name)):
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: main thread is not in main loop
+data.json을 모두 추출해야 정상적으로 가동합니다.
+1. data.json 추출
+2. 메세지 전송량 변화 추이(개인)
+3. 메세지 전송 시각(메세지 건 당)
+4. 메세지 전송 시각(글자수 당)
+5. 메세지 전송량
+6. 자주 쓰는 단어(필터 OFF)(개인)
+7. 자주 쓰는 단어(필터 OFF)(단체)
+8. 자주 쓰는 단어(필터 ON)(개인)
+9. 자주 쓰는 단어(필터 ON)(단체)
+0. 종료
+원하는 기능을 선택하세요: Exception ignored in: <function Image.__del__ at 0x00000242E5DB1620>
+Traceback (most recent call last):
+  File "C:\Users\sin00\AppData\Local\Programs\Python\Python311\Lib\tkinter\__init__.py", line 4083, in __del__
+    self.tk.call('image', 'delete', self.name)
+RuntimeError: main thread is not in main loop
+0
+
+종료 코드 0(으)로 완료된 프로세스
