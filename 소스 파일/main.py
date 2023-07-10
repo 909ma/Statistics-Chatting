@@ -1,8 +1,5 @@
 import json
-import json_extraction
-import json_extraction2
-import json_extraction_kakao1
-import json_extraction_kakao2
+import menu_extraction
 import count_message2
 import sending_time_message
 import sending_time_message2
@@ -24,44 +21,36 @@ def main():
     print(config_data['output_file'])
 
     while True:
-        print("11. 텔레그램 data.json 추출")
-        print("12. 텔레그램 dataYYYYMM.json 추출")
-        print("21. 카카오톡 data.json 추출")
-        print("22. 카카오톡 dataYYYYMM.json 추출")
-        print("3. 메세지 전송량 변화 추이(개인)")
-        print("4. 메세지 전송 시각(메세지 건 당)")
-        print("5. 메세지 전송 시각(글자수 당)")
-        print("6. 메세지 전송량")
-        print("7. 자주 쓰는 단어(필터 OFF)(개인)")
-        print("8. 자주 쓰는 단어(필터 OFF)(단체)")
-        print("9. 자주 쓰는 단어(필터 ON)(개인)")
-        print("10. 자주 쓰는 단어(필터 ON)(단체)")
+        print("data.json을 모두 추출해야 정상적으로 가동합니다.")
+        print("1. data.json 추출")
+        print("2. 메세지 전송량 변화 추이(개인)")
+        print("3. 메세지 전송 시각(메세지 건 당)")
+        print("4. 메세지 전송 시각(글자수 당)")
+        print("5. 메세지 전송량")
+        print("6. 자주 쓰는 단어(필터 OFF)(개인)")
+        print("7. 자주 쓰는 단어(필터 OFF)(단체)")
+        print("8. 자주 쓰는 단어(필터 ON)(개인)")
+        print("9. 자주 쓰는 단어(필터 ON)(단체)")
         print("0. 종료")
         choice = input("원하는 기능을 선택하세요: ")
 
-        if choice == "11":
-            json_extraction.run(config_data['input_file'], config_data['output_file'])
-        elif choice == "12":
-            json_extraction2.run(config_data['input_file'])
-        elif choice == "21":
-            json_extraction_kakao1.run(config_data['input_file_kakao'])
-        elif choice == "22":
-            json_extraction_kakao2.run(config_data['input_file_kakao'])
-        elif choice == "3":
+        if choice == "1":
+            menu_extraction.main()
+        elif choice == "2":
             count_message2.run(config_data['output_file'], config_data['group_name'], config_data['font_path'], config_data['result_folder'])
-        elif choice == "4":
+        elif choice == "3":
             sending_time_message.run(config_data['font_path'], config_data['group_name'], config_data['result_folder'])
-        elif choice == "5":
+        elif choice == "4":
             sending_time_message2.run(config_data['font_path'], config_data['group_name'], config_data['result_folder'])
-        elif choice == "6":
+        elif choice == "5":
             traffic_sending.run(config_data['font_path'], config_data['group_name'], config_data['result_folder'])
-        elif choice == "7":
+        elif choice == "6":
             trending_words_no_filtered.run(config_data['font_path'], config_data['group_name'], config_data['result_folder'])
-        elif choice == "8":
+        elif choice == "7":
             trending_words_no_filtered2.run(config_data['font_path'], config_data['group_name'], config_data['result_folder'])
-        elif choice == "9":
+        elif choice == "8":
             trending_words.run(config_data['font_path'], config_data['group_name'], config_data['result_folder'])
-        elif choice == "10":
+        elif choice == "9":
             trending_words2.run(config_data['font_path'], config_data['group_name'], config_data['result_folder'])
         elif choice == "0":
             break

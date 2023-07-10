@@ -8,11 +8,14 @@ import os
 
 
 def run(font_path, group_name, result_folder):
-    # 시작 날짜와 끝 날짜 입력
     start_date = input("YYYYMM: ")
-    start_year = start_date[:4]
-    start_month = start_date[4:]
-    ChartTitle = start_year + "년 " + start_month + "월"
+    if start_date == "all":
+        start_date = ""
+        ChartTitle = "모든 기간"
+    else:
+        start_year = start_date[:4]
+        start_month = start_date[4:]
+        ChartTitle = start_year + "년 " + start_month + "월"
 
     # 입력 파일 경로
     input_file = fr".\src\data{start_date}.json"
@@ -64,19 +67,29 @@ def run(font_path, group_name, result_folder):
         user_top_words[user] = top_words
 
     # 워드 클라우드 생성 및 표시
-    fig, axs = plt.subplots(2, len(user_top_words) // 2, figsize=(12, 8))
-    axs = axs.flatten()
+    num_users = len(user_top_words)
+    num_cols = 3  # 한 행에 그려질 그래프의 개수
+    num_rows = (num_users - 1) // num_cols + 1
+    fig, axs = plt.subplots(num_rows, num_cols, figsize=(12, 8))
     fig.suptitle(ChartTitle + " " + group_name + ' 자주 하는 말(필터 ON)(개인)', fontsize=16, fontproperties=fontprop)
+    axs = axs.flatten()
     for i, (user, top_words) in enumerate(user_top_words.items()):
-        wordcloud = WordCloud(
-            background_color="white",
-            font_path=font_path,
-            width=800,
-            height=600
-        ).generate_from_frequencies(dict(top_words))
+        if i < len(axs):
+            wordcloud = WordCloud(
+                background_color="white",
+                font_path=font_path,
+                width=800,
+                height=600
+            ).generate_from_frequencies(dict(top_words))
+            ax = axs[i]
+            ax.imshow(wordcloud, interpolation="bilinear")
+            ax.set_title(f"Word Cloud for {user}", fontproperties=fontprop)
+            ax.axis("off")
+        else:
+            break
+    # 남는 빈 자리에 그래프가 그려지지 않도록 설정
+    for i in range(len(user_top_words), len(axs)):
         ax = axs[i]
-        ax.imshow(wordcloud, interpolation="bilinear")
-        ax.set_title(f"Word Cloud for {user}", fontproperties=fontprop)
         ax.axis("off")
     plt.tight_layout()
 

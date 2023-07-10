@@ -30,6 +30,8 @@ def convert_to_json(txt_file):
                 # 시간 형식 변환 (12시간 -> 24시간)
                 if "오후" in time:
                     hour = int(time.split()[1].split(":")[0]) + 12
+                    if hour == 24:
+                        hour -= 12
                     minute = time.split()[1].split(":")[1]
                     time = f"{hour:02d}:{minute}"
 
@@ -45,7 +47,20 @@ def convert_to_json(txt_file):
                 }
                 messages.append(message)
 
-    json_data = json.dumps(messages, indent=4, ensure_ascii=False)
+    return messages
+
+
+def save_to_json(data, output_file):
+    json_data = json.dumps(data, indent=4, ensure_ascii=False)
+
+    # JSON 데이터를 파일에 저장
+    with open(output_file, "w", encoding="utf-8") as outfile:
+        outfile.write(json_data)
+
+
+def run(input_file):
+    # JSON 형식으로 변환
+    messages = convert_to_json(input_file)
 
     # 필터링된 데이터를 저장할 디렉토리
     output_directory = "./src/"
@@ -54,15 +69,18 @@ def convert_to_json(txt_file):
     if not os.path.exists(output_directory):
         os.makedirs(output_directory)
 
-    output_file = output_directory + "data.json"
+    # 날짜별로 데이터 저장
+    data_by_month = {}
+    for message in messages:
+        date = message["date"]
+        year_month = date[:7].replace("-", "")
+        if year_month not in data_by_month:
+            data_by_month[year_month] = []
+        data_by_month[year_month].append(message)
 
-    # JSON 데이터를 파일에 저장
-    with open(output_file, "w", encoding="utf-8") as outfile:
-        outfile.write(json_data)
+    # 각 월별로 JSON 파일로 저장
+    for year_month, data in data_by_month.items():
+        output_file = f"{output_directory}data{year_month}.json"
+        save_to_json(data, output_file)
 
     print("JSON 데이터가 성공적으로 저장되었습니다.")
-
-
-def run(input_file):
-    # JSON 형식으로 변환하여 저장
-    convert_to_json(input_file)

@@ -9,11 +9,14 @@ def run(font_path, group_name, result_folder):
     # 폰트 설정
     fontprop = fm.FontProperties(fname=font_path)
 
-    # 시작 날짜와 끝 날짜 입력
     start_date = input("YYYYMM: ")
-    start_year = start_date[:4]
-    start_month = start_date[4:]
-    ChartTitle = start_year + "년 " + start_month + "월"
+    if start_date == "all":
+        start_date = ""
+        ChartTitle = "모든 기간"
+    else:
+        start_year = start_date[:4]
+        start_month = start_date[4:]
+        ChartTitle = start_year + "년 " + start_month + "월"
 
     # 입력 파일 경로
     input_files = glob.glob(fr".\src\data{start_date}*.json")

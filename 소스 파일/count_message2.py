@@ -46,7 +46,7 @@ def run(input_file, group_name, font_path, result_folder):
                         user_sent_counts[year_month] = 1
 
         # 월별 메시지 전송량 추이 그래프 그리기
-        x = sorted(user_sent_counts.keys())
+        x = sorted(user_sent_counts.keys(), key=lambda d: datetime.datetime.strptime(d, "%Y-%m"))  # 월별 메시지 전송량을 정렬된 순서로 그리기 위해 정렬
         y = [user_sent_counts[key] for key in x]
 
         # 각 사용자별 그래프 그리기
