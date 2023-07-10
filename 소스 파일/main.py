@@ -16,7 +16,7 @@ import trending_words2
 
 def main():
     # JSON 파일에서 데이터 읽기
-    with open('내 설정 파일 config.json', "r", encoding="utf-8") as file:
+    with open('config.json', "r", encoding="utf-8") as file:
         config_data = json.load(file)
 
     # 읽어온 데이터 사용하기
