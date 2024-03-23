@@ -1,10 +1,11 @@
+import re
+import os
 import json
 from collections import Counter
 from konlpy.tag import Hannanum
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import matplotlib.font_manager as fm
-import os
 
 
 def run(font_path, group_name, result_folder):
@@ -56,8 +57,9 @@ def run(font_path, group_name, result_folder):
                     decoded_message = message.decode('utf-8')
                 except AttributeError:
                     decoded_message = message
-                # 형태소 분석을 통해 명사만 추출
-                nouns = hannanum.nouns(decoded_message)
+                # 정규식을 사용하여 반복되는 문자 제거 후 형태소 분석을 통해 명사만 추출
+                cleaned_message = re.sub(r'(.)\1{2,}', r'\1', decoded_message)  # 2번 이상 반복되는 문자를 1번으로 줄임
+                nouns = hannanum.nouns(cleaned_message)
                 words.extend(nouns)
         word_counts = Counter(words)
         for word in exclude_words:
@@ -70,7 +72,7 @@ def run(font_path, group_name, result_folder):
     num_users = len(user_top_words)
     num_cols = 3  # 한 행에 그려질 그래프의 개수
     num_rows = (num_users - 1) // num_cols + 1
-    fig, axs = plt.subplots(num_rows, num_cols, figsize=(12, 8))
+    fig, axs = plt.subplots(num_rows, num_cols, figsize=(18, 12))
     fig.suptitle(ChartTitle + " " + group_name + ' 자주 하는 말(필터 ON)(개인)', fontsize=16, fontproperties=fontprop)
     axs = axs.flatten()
     for i, (user, top_words) in enumerate(user_top_words.items()):
